@@ -1,1 +1,47 @@
+.tooltip {
+	position: relative;
+	display: inline;
 
+	text-decoration: underline;
+	text-decoration-style: dashed;
+	text-decoration-color: blue;
+
+	cursor: pointer;
+}
+.tooltip span {
+	visibility: hidden;
+	
+	width: 400px;
+	
+	background-color: white;
+	color: black;
+
+	border: 1px lightgrey solid;
+	
+	text-align: left;
+	
+	border-radius: 4px;
+	
+	padding: 10px 10px;
+	
+	position: absolute;
+	z-index: 1;
+	
+	top: 150%;
+	left: 50%;
+	
+	margin-left: -200px;
+
+	box-shadow: 5px 5px 14px #888888;
+}
+
+.tooltip span::after {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	margin-left: -5px;
+}
+.tooltip:hover span {
+	visibility: visible;
+}
